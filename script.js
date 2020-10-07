@@ -23,6 +23,9 @@ function searchWeather(city) {
     url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d9995652090810a377b77a746d600a6e&units=imperial`,
     dataType: "json",
   }).then(function (response) {
+    $("#today-temp").empty();
+    $("#today-humidity").empty();
+    $("#today-wind").empty();
     var weatherIcon = response.weather[0].icon;
     console.log(response);
     searches.push(city);
