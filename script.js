@@ -20,7 +20,7 @@ $("#history").on("click", "li", function (event) {
 function searchWeather(city) {
   $.ajax({
     type: "GET",
-    url: `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d9995652090810a377b77a746d600a6e&units=imperial`,
+    url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d9995652090810a377b77a746d600a6e&units=imperial`,
     dataType: "json",
   }).then(function (response) {
     var weatherIcon = response.weather[0].icon;
@@ -87,7 +87,7 @@ function forecast(city) {
       $(`#day${[i]}-humidity`).text(`Humidity: ${forecastHumidity}%`);
       $(`#day${[i]}-icon`).attr(
         "src",
-        `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`
+        `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`
       );
     }
   });
