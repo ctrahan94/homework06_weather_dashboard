@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Weather Dashboard</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+    <header>Weather Dashboard</header>
+    <input type="text" id="search" placeholder="Search" />
+    <button class="btn btn-primary" id="search-button">Search</button>
+    <ul id="history"></ul>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <h3 id="city"></h3>
+          <img id="todays-icon" />
+          <div id="today-temp"></div>
+          <div id="today-humidity"></div>
+          <div id="today-wind"></div>
+          <div id="uv-index"></div>
+        </div>
+      </div>
+      <div class="row center">
+        <h3 id="fiveDayForecast"></h3>
+      </div>
+      
+      <div class ="row">
+      <div class="col-2.5">
+        <h6 id="day1-date"></h6>
+        <img id="day1-icon" />
+        <p id="day1-temp"></p>
+        <p id="day1-humidity"></p>
+      </div>
+
+      <div class="col-2.5">
+        <h6 id="day2-date"></h6>
+        <img id="day2-icon" />
+        <p id="day2-temp"></p>
+        <p id="day2-humidity"></p>
+      </div>
+
+      <div class="col-2.5">
+        <h6 id="day3-date"></h6>
+        <img id="day3-icon" />
+        <p id="day3-temp"></p>
+        <p id="day3-humidity"></p>
+      </div>
+
+      <div class="col-2.5">
+        <h6 id="day4-date"></h6>
+        <img id="day4-icon" />
+        <p id="day4-temp"></p>
+        <p id="day4-humidity"></p>
+      </div>
+
+      <div class="col-2.5">
+        <h6 id="day5-date"></h6>
+        <img id="day5-icon" />
+        <p id="day5-temp"></p>
+        <p id="day5-humidity"></p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
