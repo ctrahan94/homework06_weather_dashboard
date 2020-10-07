@@ -87,7 +87,7 @@ function forecast(city) {
       $(`#day${[i]}-humidity`).text(`Humidity: ${forecastHumidity}%`);
       $(`#day${[i]}-icon`).attr(
         "src",
-        `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`
+        `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`
       );
     }
   });
